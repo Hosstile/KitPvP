@@ -7,7 +7,7 @@ import us.introducedpvp.kitpvp.executors.Command;
 public class StoreCMD extends Command{
 
 	public StoreCMD(us.introducedpvp.IntroducedPvP IntroducedPvP) {
-		super(IntroducedPvP, "store");
+		super(IntroducedPvP, "kpstore");
 		// TODO Auto-generated constructor stub
 		this.registerSubCommand("sell", new sellStore(this));
 		this.registerSubCommand("buy", new openStore(this));

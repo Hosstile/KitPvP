@@ -45,7 +45,7 @@ public class sellStore extends SubCommand{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return "buy";
+		return "sell";
 	}
 
 	@Override
