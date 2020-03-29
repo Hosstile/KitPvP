@@ -1,6 +1,8 @@
 package us.introducedpvp.kitpvp.commands.maincommand;
 
+import us.introducedpvp.kitpvp.commands.maincommand.subcommands.join;
 import us.introducedpvp.kitpvp.commands.maincommand.subcommands.kits;
+import us.introducedpvp.kitpvp.commands.maincommand.subcommands.leave;
 import us.introducedpvp.kitpvp.executors.Command;
 
 public class KitPvP extends Command {
@@ -10,6 +12,8 @@ public class KitPvP extends Command {
 		super(IntroducedPvP, "kitpvp");
 		
 		this.registerSubCommand("kits", new kits(this));
+		this.registerSubCommand("join", new join(this));
+		this.registerSubCommand("leave", new leave(this));
 	}
 
 	@Override

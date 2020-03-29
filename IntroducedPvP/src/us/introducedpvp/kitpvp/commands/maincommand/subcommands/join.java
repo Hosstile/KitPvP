@@ -1,16 +1,26 @@
-package us.introducedpvp.kitpvp.commands.adminCommand;
+package us.introducedpvp.kitpvp.commands.maincommand.subcommands;
 
-import us.introducedpvp.kitpvp.commands.adminCommand.subcommands.kickall;
-import us.introducedpvp.kitpvp.commands.adminCommand.subcommands.setSpawn;
-import us.introducedpvp.kitpvp.executors.Command;
+import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
-public class kp extends Command {
+import us.introducedpvp.kitpvp.GameManager.Game;
+import us.introducedpvp.kitpvp.executors.SubCommand;
 
-	public kp(us.introducedpvp.IntroducedPvP IntroducedPvP) {
-		super(IntroducedPvP, "kp");
+public class join extends SubCommand{
+
+	public join(SubCommand parent) {
+		super(parent);
 		// TODO Auto-generated constructor stub
-		this.registerSubCommand("kickall", new kickall(this));
-		this.registerSubCommand("setspawn", new setSpawn(this));
+	}
+
+	@Override
+	public void execute(CommandSender player, String[] args) {
+		Player p = (Player) player;
+		
+		Game.addPlayer(p);
+		return;
+		
+		
 	}
 
 	@Override
@@ -28,13 +38,13 @@ public class kp extends Command {
 	@Override
 	public String getPermission() {
 		// TODO Auto-generated method stub
-		return "";
+		return "kitpvp.join";
 	}
 
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return "kp";
+		return "join";
 	}
 
 	@Override
