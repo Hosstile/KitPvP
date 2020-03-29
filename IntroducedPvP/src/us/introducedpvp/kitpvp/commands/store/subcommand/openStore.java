@@ -1,23 +1,26 @@
-package us.introducedpvp.kitpvp.commands.adminCommand.subcommands;
+package us.introducedpvp.kitpvp.commands.store.subcommand;
 
 import org.bukkit.command.CommandSender;
+import org.bukkit.entity.Player;
 
-import us.introducedpvp.kitpvp.Interfaces.Messages;
+import us.introducedpvp.kitpvp.GUIS.StoreBuy;
 import us.introducedpvp.kitpvp.executors.SubCommand;
-import us.introducedpvp.kitpvp.management.Manager;
-import us.introducedpvp.kitpvp.utilities.utils;
 
-public class kickall extends SubCommand{
+public class openStore extends SubCommand{
 
-	public kickall(SubCommand parent) {
+	public openStore(SubCommand parent) {
 		super(parent);
+
 	}
 
 	@Override
 	public void execute(CommandSender player, String[] args) {
-		player.sendMessage(utils.translate(Messages.prefix + " &ckicking all players&7."));
-		Manager.kickPlayers();
-		return;
+	Player p = (Player) player;
+	
+	StoreBuy.openInventory(p);
+	
+	return;
+	
 		
 	}
 
@@ -36,13 +39,13 @@ public class kickall extends SubCommand{
 	@Override
 	public String getPermission() {
 		// TODO Auto-generated method stub
-		return "";
+		return "kitpvp.buystore";
 	}
 
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		return "kickall";
+		return "buy";
 	}
 
 	@Override
