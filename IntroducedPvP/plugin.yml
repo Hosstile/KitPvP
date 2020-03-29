@@ -1,0 +1,7 @@
+name: IntroducedPvP 
+main: us.introducedpvp.IntroducedPvP
+version: 1.1R
+database: false
+author: Hosstile
+commands: 
+   kitpvp:
