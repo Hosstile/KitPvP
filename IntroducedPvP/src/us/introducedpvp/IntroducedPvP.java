@@ -2,6 +2,7 @@ package us.introducedpvp;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import us.introducedpvp.kitpvp.commands.adminCommand.kp;
 import us.introducedpvp.kitpvp.commands.maincommand.KitPvP;
 
 public class IntroducedPvP extends JavaPlugin {
@@ -41,6 +42,7 @@ public class IntroducedPvP extends JavaPlugin {
 	private void registerCommands() {
 
 		getCommand("kitpvp").setExecutor(new KitPvP(this));
+		getCommand("kp").setExecutor(new kp(this));
 		
 	}
 	

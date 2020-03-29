@@ -85,7 +85,7 @@ public abstract class Command extends SubCommand implements CommandExecutor {
 	}
 
 	public void execute(CommandSender player, String[] args) {
-		player.sendMessage(utils.translate("\n    &d&l<&8&l<&7&l< &b&lIntroducedPvP &5&lCORE &7&l>&8&l>&d&l>    "));
+		player.sendMessage(utils.translate("\n&f&l<     &b&lIntroducedPvP     &f&l>"));
 		subCommands.values().forEach(sub -> {
 			player.sendMessage(ChatColor.translateAlternateColorCodes('&', "\n&7/" + name + " " + sub.getName()
 					+ (sub.getUsage().length() == 0 ? "" : " &7" + sub.getUsage())));
